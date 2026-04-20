@@ -597,11 +597,13 @@
 </footer>
 
 <script>
-  function toggleAbstract() {
-    const btn = document.getElementById('abs-btn');
-    const content = document.getElementById('abs-content');
-    btn.classList.toggle('open');
-    content.classList.toggle('visible');
+  function toggleAbstract(btnId, contentId) {
+    const btn = document.getElementById(btnId);
+    const content = document.getElementById(contentId);
+    if (btn && content) {
+      btn.classList.toggle('open');
+      content.classList.toggle('visible');
+    }
   }
 
   const links = document.querySelectorAll('.sidebar-links a');
